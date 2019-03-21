@@ -16,8 +16,8 @@ function Rxx = autocor(N,L)
         
         for t = 0 : N - 1
             x_aux = zeros(1, N);
-            /* Creates t shifted signals from the already
-               segmented signal xl */
+            // Creates t shifted signals from the already
+            // segmented signal xl
             x_aux(1 : N-t) = x_aux(1 : N-t) + xl(1+t : N);
             // Fills and sums all the resulted matrices 
             Rxx(t+1, : ) = xl .* x_aux + Rxx(t+1, : );
@@ -26,9 +26,9 @@ function Rxx = autocor(N,L)
     
     Rxx = Rxx/L;
     
-    /* To analyze the results, run the following:
-        Rxx = autocor(50,5000);
-        figure;
-        mesh((Rxx));
-    Or whatever variable you choose*/
+    // To analyze the results, run the following:
+    //  Rxx = autocor(50,5000);
+    //  figure;
+    //  mesh((Rxx));
+    // Or whatever variable you choose
 endfunction
