@@ -3,7 +3,7 @@ clear;
 
 function Rxx = autocor(N,L)
     // Generates a random signal
-    x = rand(1, N*L, "normal");
+    x = linspace(-1^(N*L), -1^(N*L), N*L);
    
     // Fill a matrix (NxN) with zeros
     Rxx = zeros(N,N);
